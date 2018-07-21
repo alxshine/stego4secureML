@@ -8,6 +8,7 @@ The command for this is: `git submodule update --init`
 
 # Generating the data
 We wrote a number of utility scripts to recreate our results very easily. To generate all data used in [our EUSIPCO paper](paper/SSPB2018_EUSIPCO.pdf), you have to run the following scripts in the order they are listed.
+Scripts 02 and 05 can take quite a long time (05 takes 3 hours on our test machine).
 - `01_download.py`: downloads the *natural* and *secret* model from [mnist\_challenge](https://github.com/MadryLab/mnist_challenge).
 - `02_automated_test_generation.py`: creates adversarial examples for both networks, and saves the labels assigned to them by the respective target networks.
 - `03_generate_estimates.py`: runs our estimator kernel on the adversarial images, saving the estimates so we do not have to recalculate them later on.

@@ -35,11 +35,11 @@ for model in models:
             configFile.truncate()
             
             #this is not very good style, but it is so much faster than copying the code from the original file and importing it
-            # completed = run(pgd_args)
-            # if completed.returncode != 0:
-                # print("The call to pgd_attack.py for epsilon {} returned an error".format(epsilon), file=sys.stderr)
-                # cleanup()
-                # sys.exit(completed.returncode)
+            completed = run(pgd_args)
+            if completed.returncode != 0:
+                print("The call to pgd_attack.py for epsilon {} returned an error".format(epsilon), file=sys.stderr)
+                cleanup()
+                sys.exit(completed.returncode)
 
             completed = run(run_args)
             if completed.returncode != 0:
