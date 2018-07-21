@@ -1,0 +1,7 @@
+*.pyc
+*.npy
+MNIST_data
+models
+*.zip
+*.log
+*.npz

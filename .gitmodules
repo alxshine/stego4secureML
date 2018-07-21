@@ -1,0 +1,3 @@
+[submodule "mnist_challenge"]
+	path = mnist_challenge
+	url = https://github.com/MadryLab/mnist_challenge
