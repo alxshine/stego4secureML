@@ -7,7 +7,7 @@ path = '{}/e_{}.npy'
 diff_path = '{}/diffs_e_{}.npy'
 
 print("%The mins of the difference between the weighted estimates and the adv_samples")
-print("%epsilon\tnatural\tadv_trained\tsecret")
+print("%epsilon\tnatural\tsecret")
 
 for epsilon in epsilons:
     diffs = [np.load(diff_path.format(folder, epsilon)) for folder in folders]

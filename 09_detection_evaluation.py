@@ -9,7 +9,7 @@ folder_path = "attacks_{}"
 folders = [folder_path.format(model) for model in models]
 
 print("%the 'either-rate' (combined coverage of the model and our classifier) per model and epsilon")
-print("%epsilon\tnatural\tadv_trained\tsecret")
+print("%epsilon\tnatural\tsecret")
 
 for epsilon in epsilons:
     adv_label_sets = [np.load("{}/labels_e_{}.npy".format(folder, epsilon)) for folder in folders]
